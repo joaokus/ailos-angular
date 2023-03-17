@@ -1,0 +1,23 @@
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header msg-modal-error-header">
+            <div class="row">
+                <div class="modal-header-content">
+                    <span>{{ title }} </span>
+                
+                    <button class="close" data-dismiss="modal" aria-label="Close" (click)="hidden()">
+                        <span aria-hidden="true">x</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body">
+            {{ message }}
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-default" (click)="hidden()">
+                Fechar 
+            </button>
+        </div>
+    </div>
+</div>

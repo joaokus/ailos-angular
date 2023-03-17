@@ -1,0 +1,63 @@
+#app-header {
+    height: auto;
+    margin-left: 120px;
+    padding: 15px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumb {
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Open Sans';
+    color: #889499;
+}
+
+.margin-right-12 {
+    margin-right: 12px;
+}
+
+.badge {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    float: right;
+    right: 10px;
+    background: #FF0000;
+    color: #FFF;
+    font-family: 'Open Sans';
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0;
+    list-style: 14.06px;
+    border-radius: 50%;
+}
+
+.icon-settings {
+    position: relative;
+    width: 0;
+    height: 0;
+    top: 25px;
+    right: 13px;
+    float: right;
+}
+
+.container-profile {
+    display: flex;
+    margin: 0 auto;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}

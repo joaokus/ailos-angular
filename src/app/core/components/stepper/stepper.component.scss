@@ -1,0 +1,73 @@
+.stepper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.stepper .stepper-item {
+    display: table-cell;
+    position: relative;
+    padding: 24px;
+}
+
+.stepper .stepper-item .stepper-title {
+    margin-top: 9px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 16.41px;
+    color: #165C7D;
+}
+
+.stepper .stepper-item .stepper-bar-left,
+.stepper .stepper-item .stepper-bar-right {
+    position: absolute;
+    top: 34px;
+    height: 1px;
+    border-top: 1px solid #D0DEE5;
+}
+
+.stepper .stepper-item .stepper-bar-right {
+    right: 0;
+    left: 51%;
+    margin-left: 10px;
+}
+
+.stepper .stepper-item .stepper-bar-left {
+    left: 0;
+    right: 51%;
+    margin-right: 10px;
+}
+
+.stepper .stepper-item .stepper-circle {
+    width: 18px;
+    height: 18px;
+    margin: 0 auto;
+    background: #FFF;
+    border-radius: 50%;
+    border: 2px solid #165C7D;
+    text-align: center;
+}
+
+.stepper .stepper-item.active .stepper-circle {
+    width: 18px;
+    height: 18px;
+    background: #165C7D;
+    border-radius: 50%;
+    border: 2px solid #165C7D;
+    text-align: center;
+}
+
+.stepper .stepper-item.disabled .stepper-circle {
+    width: 18px;
+    height: 18px;
+    margin: 0 auto;
+    background: #D0DEE5;
+    border-radius: 50%;
+    border: 2px solid #D0DEE5;
+    text-align: center;
+}
+
+

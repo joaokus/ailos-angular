@@ -1,0 +1,16 @@
+<div>
+    <label class="control-label" for="{{ _id }}">CPF</label>
+
+    <input 
+        onlyNumber
+        [attr.id]="id" 
+        type="text" 
+        autocomplete="off"
+        class="form-control" 
+        mask="000.000.000-00"
+        placeholder="000.000.000-00"
+        [pattern]="cpfPattern"
+        [formControl]="formControl"   
+        (blur)="validCpf($event)"
+        [ngClass]="{ 'is-feedback': (formControl.touched || formControl.dirty) && formControl.invalid }">
+</div>

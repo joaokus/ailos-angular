@@ -1,0 +1,44 @@
+<ng-template #contentTemplate>
+  <ul>
+    <li title="Menu">
+      <a href="#" class="side-nav-link-ref" routerLinkActive="active">
+        <img src="assets/images/logo.png" height="60" width="60" alt="" />
+      </a>
+    </li>
+
+    <li title="Menu">
+      <a href="#" class="side-nav-link-ref" routerLinkActive="active">
+        <img src="assets/images/main-menu.png" height="25" width="25" alt="" />
+      </a>
+    </li>
+    <li title="Pesquisar">
+      <a href="#" class="side-nav-link-ref" routerLinkActive="active">
+        <img src="assets/images/search.png" height="25" width="25" alt="" />
+      </a>
+    </li>
+    <li title="Favoritos">
+      <a href="#" class="side-nav-link-ref" routerLinkActive="active">
+        <img src="assets/images/star.png" height="25" width="25" alt="" />
+      </a>
+    </li>
+    <li title="Mensagens">
+      <a href="#" class="side-nav-link-ref" routerLinkActive="active">
+        <img src="assets/images/messenger.png" height="25" width="25" alt="" />
+      </a>
+    </li>
+    <li title="Configurações">
+      <a href="#" class="side-nav-link-ref" routerLinkActive="active">
+        <img src="assets/images/settings.png" height="25" width="25" alt="" />
+      </a>
+    </li>
+    <li title="Empresa">
+      <a href="#" class="side-nav-link-ref" routerLinkActive="active">
+        <img src="assets/images/bank.png" height="25" width="25" alt="" />
+      </a>
+    </li>
+  </ul>
+</ng-template>
+
+<div class="vertical-menu">
+  <ng-container *ngTemplateOutlet="contentTemplate"></ng-container>
+</div>

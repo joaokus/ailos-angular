@@ -1,0 +1,53 @@
+<stepper></stepper>
+
+<h2>Informe o CPF do futuro cooperado (a)</h2>
+<div style="margin-bottom: 10px;">
+    <span class="subtitle">Se necesário, você poderá duplucar uma conta existente ou pausar e retornar este cadastro futurametne.</span>
+    <br>
+    <span class="subtitle">Digite apensa os números (sem pontos ou traços)</span>
+</div>
+
+<form [formGroup]="form">
+    <div class="row">
+        <input-cpf 
+            _id="cpf"
+            formControlName="cpf"
+            [formControl]="f.cpf">
+        </input-cpf>
+
+        <div class="container-button">
+            <button class="btn btn-default btn-default-margin" (click)="searchCPF()" [disabled]="isLoading || isStatusRegular">
+                <img *ngIf="isLoading" class="rotation" src="assets/images/loading.png" width="20" height="20" alt="">
+                <span *ngIf="!isLoading">Consultar por CPF</span>
+            </button>
+        </div>
+        
+    </div>
+</form>
+
+<div style="display: flex;" *ngIf="person">
+    <card-person
+        title="Situação cadastral do CPF"
+        subtitle="Consulta na Receita Federal"
+        [person]="person">
+    </card-person>
+
+    <card-conta *ngFor="let account of person.accounts"
+        [title]="account.type === 'aplicacao' ? 'Conta aplicação' : 'Conta corrente'"
+        subtitle="Cooperativa Viacredi"
+        [account]="account">
+    </card-conta>
+    
+</div>
+
+<div class="row">
+    <div class="footer-button">
+        <button class="btn btn-m btn-default margin-right-15" *ngIf="isStatusRegular">
+            <span>Iniciar nova admissão</span>
+        </button>
+
+        <button class="btn btn-m btn-outlined">
+            <span>Dicas para abertura da conta</span>
+        </button>
+    </div>
+</div>
